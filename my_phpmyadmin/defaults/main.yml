@@ -10,7 +10,6 @@ service_list:
   - mysqld
 
 php_access: local
-
 config_phpmyadmin: false
 config_repo: false
 

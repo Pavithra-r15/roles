@@ -1,8 +1,10 @@
 ---
 # tasks file for my_phpmyadmin
 - name: config EPEL repo
-  # command: subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms && dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y
-  command: dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y
+  #first uncommamd the subcription package for downloading EPEL PACKAGE.
+  command: subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms 
+  #After downloading the EPEL package comment the above line and uncomment the install package
+  #command: dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y
   when: config_repo == "true"
   
 - name: Install required packages
